@@ -2,6 +2,13 @@
 This project aim to compare the performance of classical machine learning approaches for predicting BI-RADS categories from mammography reports.
 
 
+This is part of a coursework solution for the [Kaggle SPR 2026 Mammography Report Classification](https://www.kaggle.com/competitions/spr-2026-mammography-report-classification) competition (Emory CS 534 final project).
+
+**Task**: Predict the BI-RADS category (0–6) from the *findings* section of Portuguese-language mammography reports. The *impression* section (which states the BI-RADS category explicitly) has been removed — models must infer the category from descriptive findings alone.
+
+**Metric**: Macro-averaged F1 (`sklearn.metrics.f1_score(..., average='macro')`)
+
+
 ## Data Preprocessing
 All reports undergo a baseline cleaning step (e.g lowercasing, removal of anonymization tokens, carriage returns, newlines removal, etc). Beyond this baseline clean data, we evaluate four additional preprocessing techniques:
 - Stop word removal using language specific NLTK corpora.
